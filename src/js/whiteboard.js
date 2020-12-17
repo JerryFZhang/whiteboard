@@ -67,7 +67,7 @@ const whiteboard = {
 
         //background grid (repeating image) and smallest screen indication
         _this.backgroundGrid = $(
-            `<div style="position: absolute; left:0px; top:0; opacity: 0.2; background-image:url('${_this.settings["backgroundGridUrl"]}'); height: 100%; width: 100%;"></div>`
+            `<div style="position: absolute; left:0px; top:0; opacity: 0.2; left:80px; background-image:url('${_this.settings["backgroundGridUrl"]}'); height: 100%; width: 100%;"></div>`
         );
         // container for background images
         _this.imgContainer = $(
@@ -75,11 +75,11 @@ const whiteboard = {
         );
         // whiteboard canvas
         _this.canvasElement = $(
-            '<canvas id="whiteboardCanvas" style="position: absolute; left:0px; top:0; cursor:crosshair;"></canvas>'
+            '<canvas id="whiteboardCanvas" style="position: absolute; left:80px; top:0; cursor:crosshair;"></canvas>'
         );
         // SVG container holding drawing or moving previews
         _this.svgContainer = $(
-            '<svg style="position: absolute; top:0px; left:0px;" width="100%" height="100%"></svg>'
+            '<svg style="position: absolute; top:0px; left:80px;" width="100%" height="100%"></svg>'
         );
         // drag and drop indicator, hidden by default
         _this.dropIndicator = $(
@@ -87,15 +87,15 @@ const whiteboard = {
         );
         // container for other users cursors
         _this.cursorContainer = $(
-            '<div style="position: absolute; left:0px; top:0; height: 100%; width: 100%;"></div>'
+            '<div id="cursorContainer" style="position: absolute; left:80px; top:0; height: 100%; width: 100%;"></div>'
         );
         // container for texts by users
         _this.textContainer = $(
-            '<div class="textcontainer" style="position: absolute; left:0px; top:0; height: 100%; width: 100%; cursor:text;"></div>'
+            '<div id="textContainer" class="textcontainer" style="position: absolute; left:0px; top:0; height: 100%; width: 100%; cursor:text;"></div>'
         );
         // mouse overlay for draw callbacks
         _this.mouseOverlay = $(
-            '<div id="mouseOverlay" style="cursor:none; position: absolute; left:0px; top:0; height: 100%; width: 100%;"></div>'
+            '<div id="mouseOverlay" style="cursor:none; position: absolute; left:80px; top:0; height: 100%; width: 100%;"></div>'
         );
 
         $(whiteboardContainer)
