@@ -91,7 +91,7 @@ const whiteboard = {
         );
         // container for texts by users
         _this.textContainer = $(
-            '<div id="textContainer" class="textcontainer" style="position: absolute; left:0px; top:0; height: 100%; width: 100%; cursor:text;"></div>'
+            '<div id="textContainer" class="textcontainer" style="position: absolute; left:80px; top:0; height: 100%; width: 100%; cursor:text;"></div>'
         );
         // mouse overlay for draw callbacks
         _this.mouseOverlay = $(
@@ -1195,14 +1195,14 @@ const whiteboard = {
                             .css({ left: data[0] + "px", top: data[1] - 15 + "px" });
                     } else {
                         _this.cursorContainer.append(
-                            '<div style="font-size:0.8em; padding-left:2px; padding-right:2px; background:gray; color:white; border-radius:3px; position:absolute; left:' +
+                            '<div style="font-size:0.9em; padding:4px; background:#82100b; color:white; border-radius:3px; position:absolute; left:' +
                                 data[0] +
                                 "px; top:" +
                                 (data[1] - 151) +
                                 'px;" class="userbadge ' +
                                 content["username"] +
                                 '">' +
-                                '<div style="width:4px; height:4px; background:gray; position:absolute; top:13px; left:-2px; border-radius:50%;"></div>' +
+                                '<div style="left:0px; top:4px; transform:rotate(45deg); width:0px; height:0px; position:absolute; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-right:7px solid #15325F;"></div>' +
                                 decodeURIComponent(atob(content["username"])) +
                                 "</div>"
                         );
